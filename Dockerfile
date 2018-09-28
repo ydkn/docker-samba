@@ -4,7 +4,7 @@ MAINTAINER Florian Schwab <me@ydkn.de>
 # update system
 RUN apk --no-cache --no-progress upgrade
 
-# install avahi
+# install samba
 RUN apk --no-cache --no-progress add samba
 
 # copy scripts
