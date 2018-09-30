@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y -qq
 
 # install nss-ldap, samba
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -qq -y --fix-missing --no-install-recommends \
-    ca-certificates libnss-ldapd libpam-ldapd samba
+    ca-certificates libnss-ldapd libpam-ldapd samba samba-vfs-modules samba-dsdb-modules
 
 # enable nss-ldap
 RUN sed -i "/^passwd:/c\passwd:\t\tcompat ldap" /etc/nsswitch.conf
