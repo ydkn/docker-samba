@@ -17,6 +17,7 @@ RUN sed -i "/^shadow:/c\shadow:\t\tcompat ldap" /etc/nsswitch.conf
 # copy scripts
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY samba-user.sh /usr/local/bin/samba-user
+COPY service /etc/service
 
 # cleanup
 RUN rm -rf /tmp/* /var/tmp/* /usr/share/man/* /usr/share/doc/*
