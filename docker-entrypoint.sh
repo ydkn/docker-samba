@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/bin/sh -e
 
-set -eo pipefail
-shopt -s nullglob
+# set environment
+export HOME=/tmp
 
-/usr/sbin/nslcd
-
-exec "$@"
+# run
+exec $@
