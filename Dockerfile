@@ -1,5 +1,5 @@
 FROM debian:buster-slim
-MAINTAINER Florian Schwab <me@ydkn.de>
+MAINTAINER Florian Schwab <me@ydkn.io>
 
 # update system
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq
